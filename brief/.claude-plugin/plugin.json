@@ -1,0 +1,12 @@
+{
+  "name": "brief",
+  "version": "0.1.0",
+  "description": "Reads each prompt before Claude does: asks Claude to settle vague prompts by research and ask only real decisions through a form, and on '??' has a second model write a full brief with intent, task, done bar and questions.",
+  "author": {
+    "name": "Tigran Macintosh",
+    "url": "https://github.com/Mhitaryan-Tigran"
+  },
+  "homepage": "https://github.com/Mhitaryan-Tigran/claude-plugins/tree/main/brief",
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "tigran-macintosh",
+  "description": "Claude Code plugins by Tigran Macintosh.",
+  "owner": {
+    "name": "Tigran Macintosh",
+    "url": "https://github.com/Mhitaryan-Tigran"
+  },
+  "plugins": [
+    {
+      "name": "brief",
+      "description": "A prompt brief layer between you and Claude Code: clarify-first on every prompt, a full second-model brief on ??.",
+      "source": "./brief",
+      "category": "productivity"
+    }
+  ]
+}
