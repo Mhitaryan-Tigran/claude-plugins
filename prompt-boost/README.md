@@ -2,9 +2,9 @@
   <img src="../docs/clawds.png" width="460" alt="Five Clawds dancing">
 </p>
 
-<h1 align="center">brief</h1>
+<h1 align="center">prompt-boost</h1>
 
-<p align="center">A layer between you and Claude Code that reads every prompt first.<br>Vague prompts turn into a task with scope, a finish line and the few questions only you can answer.</p>
+<p align="center">Improves every prompt automatically, before Claude reads it.<br>Vague prompts turn into a task with scope, a finish line and the few questions only you can answer.</p>
 
 <p align="center">
   <img src="docs/hero.gif" width="860" alt="A vague prompt becomes a brief, Claude reads the code, then asks one grounded question">
@@ -44,10 +44,10 @@ A prompt that is clear enough gets no questions and no delay. Where Claude picke
 ## Setup
 
 <p align="center">
-  <img src="docs/setup.png" width="860" alt="The brief-setup command asking for model, language, light mode and brief display">
+  <img src="docs/setup.png" width="860" alt="The prompt-boost-setup command asking for model, language, light mode and brief display">
 </p>
 
-`/brief-setup` asks for the model, the language, light mode and whether to show the brief, then a line about who you are, and writes the config.
+`/prompt-boost-setup` asks for the model, the language, light mode and whether to show the brief, then a line about who you are, and writes the config.
 
 | Key | Default | Meaning |
 |---|---|---|
@@ -62,9 +62,9 @@ A prompt that is clear enough gets no questions and no delay. Where Claude picke
 | `profile` | empty | A sentence about you, or a path to a markdown file |
 | `memory_index` | empty | Markdown index of your notes, links as `[Title](name.md)`, so the brief can point at the right ones |
 | `context_command` | empty | Shell command whose output joins every brief, such as a calendar or `git status` |
-| `log` | `~/.claude/brief/log.jsonl` | Every prompt with its brief or skip reason; empty turns it off |
+| `log` | `~/.claude/prompt-boost/log.jsonl` | Every prompt with its brief or skip reason; empty turns it off |
 
-Settings live in `~/.claude/brief.json`, and a project's `.claude/brief.json` overrides them.
+Settings live in `~/.claude/prompt-boost.json`, and a project's `.claude/prompt-boost.json` overrides them.
 
 ## How it behaves
 
@@ -76,9 +76,9 @@ Settings live in `~/.claude/brief.json`, and a project's `.claude/brief.json` ov
 
 ```
 /plugin marketplace add Mhitaryan-Tigran/claude-plugins
-/plugin install brief@tigran-macintosh
+/plugin install prompt-boost@tigran-macintosh
 ```
 
-Restart Claude Code and run `/brief-setup`. For updates on their own, open `/plugin` → **Marketplaces** → `tigran-macintosh` → **Enable auto-update**.
+Restart Claude Code and run `/prompt-boost-setup`. For updates on their own, open `/plugin` → **Marketplaces** → `tigran-macintosh` → **Enable auto-update**.
 
 <sub>MIT · Tigran Macintosh</sub>

@@ -1,12 +1,12 @@
 {
-  "name": "brief",
-  "version": "0.1.1",
-  "description": "Reads each prompt before Claude does: asks Claude to settle vague prompts by research and ask only real decisions through a form, and on '??' has a second model write a full brief with intent, task, done bar and questions.",
+  "name": "prompt-boost",
+  "version": "0.2.0",
+  "description": "Improves every prompt automatically: vague prompts get settled from the code and only real decisions are asked; end a prompt with ?? for a full brief from a second model.",
   "author": {
     "name": "Tigran Macintosh",
     "url": "https://github.com/Mhitaryan-Tigran"
   },
-  "homepage": "https://github.com/Mhitaryan-Tigran/claude-plugins/tree/main/brief",
+  "homepage": "https://github.com/Mhitaryan-Tigran/claude-plugins/tree/main/prompt-boost",
   "license": "MIT",
   "hooks": "./hooks/hooks.json"
 }

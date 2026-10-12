@@ -7,9 +7,15 @@
   },
   "plugins": [
     {
-      "name": "brief",
-      "description": "A prompt brief layer between you and Claude Code: clarify-first on every prompt, a full second-model brief on ??.",
-      "source": "./brief",
+      "name": "prompt-boost",
+      "description": "Improves every prompt automatically: clarify-first on every prompt, a full second-model brief on ??.",
+      "source": "./prompt-boost",
+      "category": "productivity"
+    },
+    {
+      "name": "grill",
+      "description": "Interviews you about a task before building it, one question at a time, until the plan is shared.",
+      "source": "./grill",
       "category": "productivity"
     }
   ]

@@ -20,7 +20,7 @@ DEFAULTS = {
     'profile': '',
     'memory_index': '',
     'context_command': '',
-    'log': str(HOME / 'brief' / 'log.jsonl'),
+    'log': str(HOME / 'prompt-boost' / 'log.jsonl'),
 }
 TURNS = 6
 CAP = 6000
@@ -70,7 +70,7 @@ LABELS = {
 
 def load_config(cwd):
     cfg = dict(DEFAULTS)
-    for path in (HOME / 'brief.json', Path(cwd or '.') / '.claude' / 'brief.json'):
+    for path in (HOME / 'prompt-boost.json', Path(cwd or '.') / '.claude' / 'prompt-boost.json'):
         try:
             cfg.update(json.loads(path.read_text()))
         except Exception:
@@ -187,7 +187,7 @@ def system_prompt(cfg):
 
 
 def ask_model(payload, cfg):
-    env = dict(os.environ, CLAUDE_BRIEF_CHILD='1')
+    env = dict(os.environ, PROMPT_BOOST_CHILD='1')
     env.pop('CLAUDECODE', None)
     r = subprocess.run(
         ['claude', '-p', '--model', cfg['model'], '--setting-sources', '', '--strict-mcp-config', '--tools', '',
@@ -245,7 +245,7 @@ def log(cfg, entry):
 
 
 def main():
-    if os.environ.get('CLAUDE_BRIEF_CHILD'):
+    if os.environ.get('PROMPT_BOOST_CHILD'):
         return
     start = time.time()
     try:

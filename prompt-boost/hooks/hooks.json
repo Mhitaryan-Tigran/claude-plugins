@@ -1,12 +1,12 @@
 {
-  "description": "Prompt brief before every prompt",
+  "description": "prompt-boost on every prompt",
   "hooks": {
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/brief.py\"",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/boost.py\"",
             "timeout": 40
           }
         ]
