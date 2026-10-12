@@ -55,7 +55,7 @@ A prompt that is clear enough gets no questions and no delay. Where Claude picke
 | `language` | `English` | Language of the parts shown to you |
 | `light` | `true` | The clarify-first check on every prompt |
 | `show_brief` | `true` | Show the full `??` brief above the answer |
-| `deep_marker` | `??` | Marker at the end or start of a prompt for a full brief |
+| `deep_marker` | `??` | Marker at the end or start of a prompt, set off by a space, for a full brief; a question ending in `??` stays a question |
 | `bypass_prefix` | `,` | Prefix that skips the plugin |
 | `replies` | yes, ok, go… | Short replies that never trigger it |
 | `timeout` | `25` | Seconds the brief may take before the prompt goes through untouched |

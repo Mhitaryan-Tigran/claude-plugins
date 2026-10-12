@@ -1,6 +1,6 @@
 {
   "name": "prompt-boost",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Improves every prompt automatically: vague prompts get settled from the code and only real decisions are asked; end a prompt with ?? for a full brief from a second model.",
   "author": {
     "name": "Tigran Macintosh",

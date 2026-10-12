@@ -142,12 +142,16 @@ def skip_reason(prompt, history, cfg):
 def is_deep(prompt, cfg):
     m = cfg['deep_marker']
     p = prompt.strip()
-    return bool(m) and (p.endswith(m) or p.startswith(m))
+    return bool(m) and (p == m or p.endswith(' ' + m) or p.startswith(m + ' '))
 
 
 def strip_marker(prompt, cfg):
     p, m = prompt.strip(), cfg['deep_marker']
-    return (p[len(m):] if p.startswith(m) else p[:-len(m)] if p.endswith(m) else p).strip()
+    if p.startswith(m + ' '):
+        return p[len(m):].strip()
+    if p.endswith(' ' + m):
+        return p[:-len(m)].strip()
+    return p
 
 
 def read(path):
