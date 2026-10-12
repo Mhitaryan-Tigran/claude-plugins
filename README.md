@@ -19,12 +19,12 @@ Improves every prompt automatically. Vague prompts get settled from the code fir
 </td>
 </tr>
 <tr>
-<td width="45%"><a href="grill"><img src="grill/docs/hero.gif" alt="grill"></a></td>
+<td width="45%"><a href="super-grill"><img src="super-grill/docs/hero.gif" alt="super-grill"></a></td>
 <td valign="top">
-<h3><a href="grill">grill</a></h3>
+<h3><a href="super-grill">super-grill</a></h3>
 Interviews you about a task before building it. Claude reads the code first, then asks one question at a time with a recommended answer, and sums up the plan before writing anything.
 <br><br>
-<code>/plugin install grill@tigran-macintosh</code>
+<code>/plugin install super-grill@tigran-macintosh</code>
 </td>
 </tr>
 </table>
@@ -34,7 +34,7 @@ Interviews you about a task before building it. Claude reads the code first, the
 ```
 /plugin marketplace add Mhitaryan-Tigran/claude-plugins
 /plugin install prompt-boost@tigran-macintosh
-/plugin install grill@tigran-macintosh
+/plugin install super-grill@tigran-macintosh
 ```
 
 Restart Claude Code after installing. To get new versions on their own, open `/plugin`, go to **Marketplaces**, pick `tigran-macintosh` and choose **Enable auto-update**; Claude Code then checks at every start. `/plugin` also lists what is installed and updates it by hand.

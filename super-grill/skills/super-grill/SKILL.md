@@ -1,9 +1,9 @@
 ---
-name: grill
-description: Interview the user about a task before building it, one question at a time, until the plan is shared. Use when the user runs /grill, says "grill me", "interview me", "ask me questions first" or "let's pin this down before you start", or hands over a large or vague task they want questioned before any code is written.
+name: super-grill
+description: Interview the user about a task before building it, one question at a time, until the plan is shared. Use when the user runs /super-grill or /grill, says "grill me", "interview me", "ask me questions first" or "let's pin this down before you start", or hands over a large or vague task they want questioned before any code is written.
 ---
 
-# Grill
+# Super-grill
 
 The user wants to be questioned about the task before anything is built. Turn a loose idea into a plan both of you agree on, then stop and ask whether to start.
 

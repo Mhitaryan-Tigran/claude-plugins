@@ -13,9 +13,9 @@
       "category": "productivity"
     },
     {
-      "name": "grill",
+      "name": "super-grill",
       "description": "Interviews you about a task before building it, one question at a time, until the plan is shared.",
-      "source": "./grill",
+      "source": "./super-grill",
       "category": "productivity"
     }
   ]

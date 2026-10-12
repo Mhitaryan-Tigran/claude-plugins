@@ -2,7 +2,7 @@
   <img src="../docs/clawds.png" width="460" alt="Five Clawds dancing">
 </p>
 
-<h1 align="center">grill</h1>
+<h1 align="center">super-grill</h1>
 
 <p align="center">Claude interviews you about a task before building it.<br>One question at a time, each with ready answers, until the plan is yours too.</p>
 
@@ -39,15 +39,15 @@
 
 ## When to use it
 
-Run `/grill` with the task, for example `/grill add login to the api`, or just say "grill me" before a large or vague piece of work. It pairs with [prompt-boost](../prompt-boost), which improves every prompt automatically; grill is the deep, deliberate version for the tasks worth a real conversation first.
+Run `/super-grill` with the task, for example `/super-grill add login to the api`, or just say "grill me" before a large or vague piece of work. It pairs with [prompt-boost](../prompt-boost), which improves every prompt automatically; super-grill is the deep, deliberate version for the tasks worth a real conversation first.
 
 ## Install
 
 ```
 /plugin marketplace add Mhitaryan-Tigran/claude-plugins
-/plugin install grill@tigran-macintosh
+/plugin install super-grill@tigran-macintosh
 ```
 
-Restart Claude Code and run `/grill`. For updates on their own, open `/plugin` → **Marketplaces** → `tigran-macintosh` → **Enable auto-update**.
+Restart Claude Code and run `/super-grill`. For updates on their own, open `/plugin` → **Marketplaces** → `tigran-macintosh` → **Enable auto-update**.
 
 <sub>MIT · Tigran Macintosh</sub>

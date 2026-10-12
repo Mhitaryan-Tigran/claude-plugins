@@ -1,11 +1,11 @@
 {
-  "name": "grill",
-  "version": "0.1.0",
+  "name": "super-grill",
+  "version": "0.2.0",
   "description": "Interviews you about a task before building it: one question at a time, each with ready options and a recommendation, until the plan is shared.",
   "author": {
     "name": "Tigran Macintosh",
     "url": "https://github.com/Mhitaryan-Tigran"
   },
-  "homepage": "https://github.com/Mhitaryan-Tigran/claude-plugins/tree/main/grill",
+  "homepage": "https://github.com/Mhitaryan-Tigran/claude-plugins/tree/main/super-grill",
   "license": "MIT"
 }
