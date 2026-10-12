@@ -79,6 +79,6 @@ Settings live in `~/.claude/brief.json`, and a project's `.claude/brief.json` ov
 /plugin install brief@tigran-macintosh
 ```
 
-Restart Claude Code and run `/brief-setup`.
+Restart Claude Code and run `/brief-setup`. For updates on their own, open `/plugin` → **Marketplaces** → `tigran-macintosh` → **Enable auto-update**.
 
 <sub>MIT · Tigran Macintosh</sub>

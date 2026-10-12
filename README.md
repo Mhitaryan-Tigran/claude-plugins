@@ -27,6 +27,6 @@ Reads every prompt before Claude does. Vague prompts get settled from the code f
 /plugin install brief@tigran-macintosh
 ```
 
-Restart Claude Code after installing. `/plugin` lists what is installed and updates it.
+Restart Claude Code after installing. To get new versions on their own, open `/plugin`, go to **Marketplaces**, pick `tigran-macintosh` and choose **Enable auto-update**; Claude Code then checks at every start. `/plugin` also lists what is installed and updates it by hand.
 
 <sub>MIT · Tigran Macintosh</sub>
