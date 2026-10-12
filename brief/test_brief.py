@@ -19,6 +19,9 @@ assert brief.skip_reason(', просто привет', told, cfg) == 'bypass'
 assert brief.skip_reason('/plan', told, cfg) == 'command'
 assert brief.skip_reason('[Image #3] [Image #4]', told, cfg) == 'image'
 assert brief.skip_reason('?? обнови skywall', asked, cfg) is None
+assert brief.skip_reason('обнови ??', asked, cfg) is None
+assert brief.is_deep('add auth ??', cfg) and not brief.is_deep('add auth?', cfg)
+assert brief.strip_marker('add auth ??', cfg) == 'add auth' and brief.strip_marker('?? add auth', cfg) == 'add auth'
 assert brief.skip_reason('сделай сайт для кофейни с меню и формой брони', asked, cfg) is None
 
 lines = [

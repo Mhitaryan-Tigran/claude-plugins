@@ -9,7 +9,7 @@ HOME = Path.home() / '.claude'
 
 DEFAULTS = {
     'model': 'sonnet',
-    'deep_prefix': '??',
+    'deep_marker': '??',
     'bypass_prefix': ',',
     'replies': ['yes', 'no', 'ok', 'go', 'do it', 'continue', 'stop',
                 'да', 'нет', 'ок', 'окей', 'ага', 'давай', 'делай', 'го', 'продолжай', 'стоп'],
@@ -126,7 +126,7 @@ def skip_reason(prompt, history, cfg):
         return 'empty'
     if cfg['bypass_prefix'] and p.startswith(cfg['bypass_prefix']):
         return 'bypass'
-    if cfg['deep_prefix'] and p.startswith(cfg['deep_prefix']):
+    if is_deep(p, cfg):
         return None
     if p.startswith('/'):
         return 'command'
@@ -137,6 +137,17 @@ def skip_reason(prompt, history, cfg):
     if len(words) <= 3 and (' '.join(words) in replies or set(words) & replies or '?' in last_assistant(history)[-400:]):
         return 'reply'
     return None
+
+
+def is_deep(prompt, cfg):
+    m = cfg['deep_marker']
+    p = prompt.strip()
+    return bool(m) and (p.endswith(m) or p.startswith(m))
+
+
+def strip_marker(prompt, cfg):
+    p, m = prompt.strip(), cfg['deep_marker']
+    return (p[len(m):] if p.startswith(m) else p[:-len(m)] if p.endswith(m) else p).strip()
 
 
 def read(path):
@@ -250,13 +261,12 @@ def main():
     if reason:
         log(cfg, {**entry, 'skipped': reason})
         return
-    deep = cfg['deep_prefix'] and prompt.lstrip().startswith(cfg['deep_prefix'])
-    if not deep:
+    if not is_deep(prompt, cfg):
         if cfg['light']:
             log(cfg, {**entry, 'light': True})
             print(json.dumps(light(), ensure_ascii=False))
         return
-    prompt = prompt.lstrip()[len(cfg['deep_prefix']):].strip()
+    prompt = strip_marker(prompt, cfg)
     try:
         brief = clean(ask_model(context(prompt, history, cwd, cfg), cfg), known_nodes(read(cfg['memory_index'])))
     except Exception as e:

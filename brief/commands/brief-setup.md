@@ -15,4 +15,4 @@ Set up `~/.claude/brief.json` for the user (or `.claude/brief.json` in the curre
 3. Ask in plain text for a short profile: who they are, what they work on, how they write. Save it as `profile` (a sentence or two inline, or a path to a markdown file).
 4. Offer optional context sources: `memory_index`, a path to a markdown index of notes whose links look like `[Title](name.md)`; `context_command`, a shell command whose output is added to every brief (for example a calendar or `git status`).
 5. Write only the keys that differ from the defaults, as JSON, and show the result.
-6. Tell the user: prefix a prompt with `??` for a full brief, with `,` to skip the plugin for that message; the log is at `~/.claude/brief/log.jsonl`.
+6. Tell the user: end a prompt with `??` for a full brief, with `,` to skip the plugin for that message; the log is at `~/.claude/brief/log.jsonl`.

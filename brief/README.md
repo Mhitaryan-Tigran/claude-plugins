@@ -3,7 +3,7 @@
 A layer between you and Claude Code. It reads every prompt before Claude does.
 
 - **Every prompt, no delay.** Claude gets a short instruction: if the prompt is vague, settle what it can from the conversation, memory, code and git first, then ask only the real decisions through the question form with concrete options, and know what "done" means before starting.
-- **`??` before a prompt, about ten seconds.** A second model (Sonnet by default) reads the recent conversation and writes a full brief: the intent, the prompt rewritten as a complete task, a done bar, memory notes to read, open questions with ready options, and flags for plan-first and outward actions. You see the brief above the answer; Claude treats its questions as candidates and asks only what it cannot settle itself.
+- **`??` at the end of a prompt, about ten seconds.** A second model (Sonnet by default) reads the recent conversation and writes a full brief: the intent, the prompt rewritten as a complete task, a done bar, memory notes to read, open questions with ready options, and flags for plan-first and outward actions. You see the brief above the answer; Claude treats its questions as candidates and asks only what it cannot settle itself.
 - **`,` before a prompt** skips the plugin for that message. Short replies such as "yes", "go on" or an answer to Claude's own question are skipped too.
 
 Prompts like "update the app" or "make a site" turn into a task with scope and a finish line instead of a guess.
@@ -29,7 +29,7 @@ It calls `claude -p` for the `??` brief, so it works with whatever Claude Code i
 | `language` | `English` | Language of the parts shown to you |
 | `light` | `true` | The short clarify-first instruction on every prompt |
 | `show_brief` | `true` | Show the full `??` brief above the answer |
-| `deep_prefix` | `??` | Prefix for a full brief |
+| `deep_marker` | `??` | Marker at the end (or start) of a prompt for a full brief |
 | `bypass_prefix` | `,` | Prefix that skips the plugin |
 | `replies` | yes, ok, go… | Short replies that never trigger it |
 | `timeout` | `25` | Seconds the brief may take before the prompt goes through untouched |
