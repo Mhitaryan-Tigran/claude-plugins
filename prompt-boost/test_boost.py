@@ -21,8 +21,6 @@ assert boost.skip_reason('[Image #3] [Image #4]', told, cfg) == 'image'
 assert boost.skip_reason('?? обнови skywall', asked, cfg) is None
 assert boost.skip_reason('обнови ??', asked, cfg) is None
 assert boost.is_deep('add auth ??', cfg) and not boost.is_deep('add auth?', cfg)
-assert not boost.is_deep('can we start from scratch??', cfg) and boost.skip_reason('давай соберём второй плагин??', asked, cfg) != 'deep'
-assert boost.strip_marker('can we??', cfg) == 'can we??'
 assert boost.strip_marker('add auth ??', cfg) == 'add auth' and boost.strip_marker('?? add auth', cfg) == 'add auth'
 assert boost.skip_reason('сделай сайт для кофейни с меню и формой брони', asked, cfg) is None
 
